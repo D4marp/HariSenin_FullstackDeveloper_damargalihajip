@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&family=Kaushan+Script&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Quicksand:wght@300;400;500;600;700&family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+.wrapper{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: linear-gradient(rgba(42, 58, 74, 0.84), rgba(42, 58, 74, .85));
+    background-size: cover;
+    background-position: center;
+}
+
+nav{
+    width: 80%;
+    height: 120px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav img{
+    width: 80px;
+    height: 60px;
+}
+nav ul{
+    display: flex;
+}
+nav ul li{
+    margin-left: 30px;
+}
+nav ul li a{
+    color: #fff;
+    line-height: 50px;
+    font-size: 14px;
+    padding: 6px 13px;
+    transition: .4s all ease-out;
+    font-family: "Quicksand", sans-serif;
+}
+nav ul li a.active,
+nav ul li a:hover{
+    background-color: #fd4a47;
+    transition: .4s all ease-out;
+}
+
+.text {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #fff;
+    padding: 20px; /* Tambahkan padding untuk memberi ruang di sekitar konten */
+}
+
+.text h1 {
+    font-size: 4vw; /* Menggunakan ukuran font responsif menggunakan vw (viewport width) */
+    font-family: "Raleway", sans-serif;
+    margin: 10px 0px;
+}
+
+.primeiroTexto {
+    border-left: 4px solid #fd4a47;
+    padding-left: 15px;
+    transform: translateX(-15px);
+}
+
+.text .btn {
+    width: 150px;
+    height: 35px;
+    border: none;
+    background-color: #fd4a47;
+    color: #fff;
+    margin-top: 20px;
+    transition: .5s all ease-out;
+    border: 1px solid #fd4a47;
+}
+
+.text .btn:hover {
+    background: transparent;
+    border: 1px solid #fd4a47;
+}
+
+.corner-image {
+    position: absolute;
+    top: 150px;
+    left: 79%;
+    transform: translateX(-50%);
+    width: 100%; /* Menggunakan lebar 100% untuk responsivitas */
+    height: auto;
+    max-width: 450px; /* Menetapkan lebar maksimum gambar */
+}
+
+/* Media query untuk layar dengan lebar kurang dari atau sama dengan 768px */
+@media only screen and (max-width: 768px) {
+    .text {
+        width: 100%; /* Mengisi seluruh lebar pada layar kecil */
+    }
+
+    .text h1 {
+        font-size: 6vw; /* Mengubah ukuran font untuk layar kecil */
+    }
+
+    .corner-image {
+        display: none; /* Sembunyikan gambar pada layar kecil jika diperlukan */
+    }
+}
